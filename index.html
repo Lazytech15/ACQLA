@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png"  href="checklist.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(ACQLA) Automated Com-Lab QR Log and Attendance</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <div class="show-student-data" id="info-container">
+        <div class="student-data-container">
+            <h1>STUDENT DATA</h1>
+            <h4 id="studentName"></h4>
+            <span>STUDENT NAME</span>
+            <h4 id="studentID"></h4>
+            <span>STUDENT ID</span>
+            <h4 id="studentSection"></h4>
+            <span>STUDENT SECTION</span>
+            <h4 id="studentsub"></h4>
+            <span>SUBJECT</span>
+            <h4 id="pcnum"></h4>
+            <span>COMPUTER UNIT #</span>
+            <h4 id="TimeDate"></h4>
+            <span>Time & Date Scan</span>
+            <!--
+            <button id="close_btn">Close</button>
+            -->
+        </div>
+    </div>
+    <div class="all-data-container">
+    <div class="other-display">
+        <div class="teacher-table">TEACHER TABLE</div>
+        <br>
+        <div class="tv-monitor"></div>
+        <h1>TV-MONITOR & WHITEBOARD</h1>
+        <br>
+    </div>
+<div class="teacher-frontTable">
+    Front Table
+</div>
+
+    <div id="table-container">
+        <table class="table" id="table-one">
+            <thead>
+                <tr id="first-row-firstset">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr id="first-row-firstset">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody id="first-row"></tbody>
+        </table>
+        <br>
+        <table class="table" id="table-two">
+            <thead>
+                <tr id="first-row-secondset">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr id="first-row-secondset">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody id="second-row"></tbody>
+        </table>
+        <br>
+        <table class="table" id="table-third">
+            <thead>
+                <tr id="first-row-thirdset">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr id="first-row-thirdset">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody id="third-row"></tbody>
+        </table>
+    </div>
+</div>
+
+<div class="doors">
+    <div id="main">FRONT DOOR</div>
+    <div id="back">BACK DOOR</div>
+</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script type="module" src="index.js"></script>
+</html>
