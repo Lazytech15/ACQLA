@@ -293,21 +293,53 @@ span.desk {
     font-size: 12px;
     margin-bottom: 10px;
 }
-/*
-.student-data-container button{
-    margin-top: 20px;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 10px;
-    width: 70%;
-    background-color: transparent;
-    transition: all 0.3s ease-in;
-    
+.mobile-view{
+    display: none;
+}
+
+@media (max-width:720px) {
+    .show-student-data{
+        display: none;
+    }
+    .all-data-container{
+        display: none;
+    }
+    .doors{
+        display: none;
+    }
+    body{
+        background-image: url(https://wallpapercave.com/wp/wp1997564.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+    .mobile-view{
+        width: 90%;
+        height: 70%;
+        border: 1px solid black;
+        border-style: dashed;
+        background-color: rgba(255, 160, 122, 0.863);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        
+    }
+    .mobile-view-container h1{
+        font-size: 25px;
+        padding: 20px;
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }   
     
 }
-.student-data-container button:hover{
-    font-weight: 400px;
-    background-color: rgb(24, 0, 243);
-    color: white;
-}
-*/
