@@ -29,6 +29,16 @@
             -->
         </div>
     </div>
+    <div class="teacher-form-container" id="teacher-form-container">
+        <div class="teacher-form-content">
+            <a id="cancel-teacher">X</a>
+            <h4><u>TEACHER</u> & <u>SUB-SECT</u></h4>
+            <input type="text" id="teacher_name" placeholder="TEACHER NAME">
+            <input type="text" id="teacher_sub" placeholder="SUBJECT">
+            <input type="text" id="teacher_sec" placeholder="SECTION">
+            <button id="confirm_btn">CONFIRM</button>
+        </div>
+    </div>
     <div class="all-data-container">
     <div class="other-display">
         <div class="teacher-table">TEACHER TABLE</div>
@@ -52,6 +62,8 @@
             <span>ON TIME</span>
             <h3 id="stud_ontime">0</h3>
         </div>
+        <button id="signin_btn">SIGN-IN</button>
+        <br>
         <button id="reset_btn">RESET</button>
         <br>
         <button id="donwload_btn">DOWNLOAD FILE</button>
@@ -169,7 +181,7 @@
 </div>
 <div class="doors">
     <div id="main">FRONT DOOR</div>
-    <div class="copy-right">
+    <div class="copy-right fade-in-out">
         &copy; <script>document.write(new Date().getFullYear())</script> Develop By Team <p>LoiGasm</p>
     </div>
     <div id="back">BACK DOOR</div>
@@ -177,6 +189,7 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
 <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 <script type="module" src="index.js"></script>
 </html>
