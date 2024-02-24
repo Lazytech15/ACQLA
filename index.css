@@ -46,7 +46,7 @@
 }
 .minimal-details-info{
     width: 250px;
-    height: 350px;
+    height: 360px;
     background-color: rgba(211, 211, 211, 0.767);
     border-radius: 20px;
     position: fixed;
@@ -60,7 +60,7 @@
 .minimal-details-container{
     text-align: center;
     width: 80%;
-    height: 95%;
+    height: 100%;
 }
 .minimal-details-container h2{
     margin-top: 20px;
@@ -99,7 +99,7 @@
         "wdth" 100;
 }
 .minimal-details-container button{
-    margin-top: 8px;
+    margin-top: 3px;
     width: 100%;
     margin-bottom: 5px;
     border-style: none;
@@ -127,6 +127,91 @@
 #reset_btn:hover{
     color: white;
     background-color:red;
+}
+.teacher-form-container{
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 25%;
+    height: 33%;
+    background-color: rgb(87, 104, 89);
+    border-radius: 20px;
+    color: lightcyan;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    display: none;
+
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    transition: 0.5s ease-in-out;
+}
+
+.teacher-form-content{
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+}
+.teacher-form-content a{
+    background-color: aquamarine;
+    color: blueviolet;
+    padding: 1px 7px;
+    border-radius: 5px;
+    position: fixed;
+    right: 20px;
+    cursor: pointer;
+    transition: 0.4s ease-in;
+
+}
+.teacher-form-content a:hover{
+    background-color: red;
+    color: azure;
+}
+.teacher-form-content h4{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.teacher-form-content input{
+    display: block;
+    margin-left: 32px;
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+    font-weight: 800;
+    border:1px solid rgba(0, 0, 0, 0.753)
+}
+.teacher-form-content button{
+    display: block;
+    margin-left: 32px;
+    margin-top: 10px;
+    padding: 5px;
+    width: 83%;
+    border-style: none;
+    border-radius: 5px;
+
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    transition: 0.5s ease-in-out;
+}
+.teacher-form-content button:hover{
+    background-color: yellowgreen;
+    color: blanchedalmond;
 }
 h1{
     font-family: "Open Sans", sans-serif;
@@ -295,6 +380,15 @@ span.desk {
 }
 .mobile-view{
     display: none;
+}
+@keyframes fadeInOut {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.fade-in-out {
+    animation: fadeInOut 5s infinite;
 }
 
 @media (max-width:720px) {
