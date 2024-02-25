@@ -66,7 +66,7 @@
         <br>
         <button id="reset_btn">RESET</button>
         <br>
-        <button id="donwload_btn">DOWNLOAD FILE</button>
+        <button id="donwload_btn">SHOW FULL DETAILS</button>
     </div>
 </div>
 <div class="teacher-frontTable">
@@ -165,6 +165,23 @@
         </table>
     </div>
 </div>
+<div class="table-sub-container" id="table-sub-container">
+    <table class="DownloadTable" id="table2">
+        <thead>
+            <tr id="teacher-table">
+                <th>STUDENT NUMNER</th>
+                <th>TEACHER NAME</th>
+                <th>SECTION</th>
+                <th>COURSE CODE</th>
+                <th>COMPUTER UNIT NUMBER</th>
+                <th>INSTRUCTOR</th>
+                <th>TIME/ DATE SCANNED</th>
+                <th>LATE</th>
+            </tr>
+        </thead>
+        <tbody id="student-container"></tbody>
+    </table>
+</div>
 <div class="mobile-view">
     <div class="mobile-view-container">
         <h1>THIS WEB-SITE IS AVAILABLE FOR BIGGER SCREEN, MOBILE PHONE IS UNDER DEVELOPING <br> <br> <br> THANK YOU FOR UNDERSTANDING!</h1>
@@ -187,9 +204,18 @@
     <div id="back">BACK DOOR</div>
 </div>
 </body>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<!--
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/exceljs/dist/exceljs.min.js"></script>
+-->
 <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
+
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+
 <script type="module" src="index.js"></script>
 </html>
