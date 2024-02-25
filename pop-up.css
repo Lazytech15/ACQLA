@@ -23,7 +23,22 @@
     text-align:center;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    
+    animation: popUp 0.4s ease-in-out;
+}
+
+@keyframes popUp {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+
+  0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
 }
 #pop-up-top{
   color:rgba(0, 205, 255, 0.8);
