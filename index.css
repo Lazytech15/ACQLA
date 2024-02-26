@@ -56,7 +56,7 @@ body {
     background-color: rgba(211, 211, 211, 0.767);
     border-radius: 20px;
     position: fixed;
-    top: 47%; 
+    top: 40%; 
     left: 110px; 
     transform: translateY(-50%);
     display: flex;
