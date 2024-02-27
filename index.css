@@ -56,8 +56,8 @@ body {
     background-color: rgba(211, 211, 211, 0.767);
     border-radius: 20px;
     position: fixed;
-    top: 40%; 
-    left: 110px; 
+    top: 47%; 
+    left: 110px;      
     transform: translateY(-50%);
     display: flex;
     justify-content: center;
@@ -487,13 +487,64 @@ span.desk {
 
 .view-btn{
     padding: 5px;
-
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
     font-variation-settings:
         "wdth" 100;
+
+}
+.header-container{
+    display: none;
+}
+.below-teacher-details{
+    display: none;
+}
+@media screen and (min-width: 1420px) and (min-height: 800px) {
+    body{
+        margin-top: 100px;
+    }
+    .header-container{
+        padding-top: 20px;
+        display: block;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        top: 0;
+
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+    .minimal-details-info{
+        top: 51%; 
+    }
+    .below-teacher-details{
+        display: flex;
+        justify-content: space-around;
+
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+    .sec-sub{
+        width: 15%;
+    }
+    .inst-tdate{
+        width: 20%;
+    }
+    .below-teacher-details p{
+        display: inline-flex;
+    }
 
 }
 @media (max-width:720px) {
