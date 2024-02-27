@@ -501,7 +501,7 @@ span.desk {
 .below-teacher-details{
     display: none;
 }
-@media screen and (min-width: 1420px) and (min-height: 800px) {
+@media screen and (max-width: 1900px){
     body{
         margin-top: 100px;
     }
@@ -524,6 +524,55 @@ span.desk {
     }
     .minimal-details-info{
         top: 51%; 
+        left: 250px;
+        transition: all 0.6s ease-in-out;
+    }
+    .below-teacher-details{
+        display: flex;
+        justify-content: space-around;
+
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+    .sec-sub{
+        width: 15%;
+    }
+    .inst-tdate{
+        width: 20%;
+    }
+    .below-teacher-details p{
+        display: inline-flex;
+    }
+}
+@media screen and (max-width: 1700px){
+    body{
+        margin-top: 100px;
+    }
+    .header-container{
+        padding-top: 20px;
+        display: block;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        top: 0;
+
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+    .minimal-details-info{
+        top: 51%; 
+        left: 150px;
+        transition: all 0.6s ease-in-out;
     }
     .below-teacher-details{
         display: flex;
@@ -546,6 +595,98 @@ span.desk {
         display: inline-flex;
     }
 
+}
+@media screen and (max-width: 1460px){
+    body{
+        margin-top: 100px;
+    }
+    .header-container{
+        padding-top: 20px;
+        display: block;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        top: 0;
+
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+    .minimal-details-info{
+        top: 51%; 
+        left: 130px;
+    }
+    .below-teacher-details{
+        display: flex;
+        justify-content: space-around;
+
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+    .sec-sub{
+        width: 15%;
+    }
+    .inst-tdate{
+        width: 20%;
+    }
+    .below-teacher-details p{
+        display: inline-flex;
+    }
+}
+@media screen and (max-width: 1400px){
+    body{
+        margin-top: 100px;
+    }
+    .header-container{
+        padding-top: 20px;
+        display: block;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        top: 0;
+
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+    .minimal-details-info{
+        top: 51%; 
+        left: 110px;
+    }
+    .below-teacher-details{
+        display: flex;
+        justify-content: space-around;
+
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+    .sec-sub{
+        width: 15%;
+    }
+    .inst-tdate{
+        width: 20%;
+    }
+    .below-teacher-details p{
+        display: inline-flex;
+    }
 }
 @media (max-width:720px) {
     .show-student-data{
