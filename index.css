@@ -501,7 +501,7 @@ span.desk {
 .below-teacher-details{
     display: none;
 }
-@media screen and (max-width: 1900px){
+@media screen and (max-width: 2500px){
     body{
         margin-top: 100px;
     }
@@ -596,96 +596,35 @@ span.desk {
     }
 
 }
-@media screen and (max-width: 1460px){
-    body{
-        margin-top: 100px;
-    }
-    .header-container{
-        padding-top: 20px;
-        display: block;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        position: fixed;
-        top: 0;
 
-        font-family: "Open Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 800;
-        font-style: normal;
-        font-variation-settings:
-            "wdth" 100;
+@media screen and (max-width: 1502px){
+    body{
+        margin-top: initial;
     }
-    .minimal-details-info{
-        top: 51%; 
-        left: 130px;
+    header{
+        display: none;
     }
     .below-teacher-details{
-        display: flex;
-        justify-content: space-around;
-
-        font-family: "Open Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        font-variation-settings:
-            "wdth" 100;
-    }
-    .sec-sub{
-        width: 15%;
-    }
-    .inst-tdate{
-        width: 20%;
-    }
-    .below-teacher-details p{
-        display: inline-flex;
-    }
-}
-@media screen and (max-width: 1400px){
-    body{
-        margin-top: 100px;
-    }
-    .header-container{
-        padding-top: 20px;
-        display: block;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        position: fixed;
-        top: 0;
-
-        font-family: "Open Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 800;
-        font-style: normal;
-        font-variation-settings:
-            "wdth" 100;
+        display: none;
     }
     .minimal-details-info{
-        top: 51%; 
+        top: 39%; 
         left: 110px;
     }
+}
+@media screen and (max-width: 1502px) and (min-height:600px){
+    body{
+        margin-top: initial;
+    }
+    header{
+        display: none;
+    }
     .below-teacher-details{
-        display: flex;
-        justify-content: space-around;
-
-        font-family: "Open Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        font-variation-settings:
-            "wdth" 100;
+        display: none;
     }
-    .sec-sub{
-        width: 15%;
-    }
-    .inst-tdate{
-        width: 20%;
-    }
-    .below-teacher-details p{
-        display: inline-flex;
+    .minimal-details-info{
+        top: 47%; 
+        left: 110px;
     }
 }
 @media (max-width:720px) {
