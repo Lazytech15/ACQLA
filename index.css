@@ -519,7 +519,7 @@ body{
     justify-content: space-evenly;
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     font-variation-settings:
         "wdth" 100;
@@ -568,30 +568,20 @@ body{
 }
 @media (min-width:1024px) and (max-width:1500px) {
     .teacher-frontTable{
-        margin-top: 110px;
+        margin-top: 170px;
         height: 150px;
     }
-    .header-container{
-        display: block;
-        font-size: 1em;
-        position: fixed;
-        top:-20px;
+    .minimal-details-info{
+        margin-top: -89%;
+        height: 65%;
     }
     .below-teacher-details{
         display: flex;
-        font-size: 0.8em;
-    }
-    .minimal-details-info{
-        margin-top: -225px;
-        height: 70%;
-    }
-    .minimal-details-container h3{
-        font-size: 0.7em;
     }
     body{
         width: 100%;
         position: fixed;
-        top: 35%; 
+        top: 28%; 
         left: 50%; 
         transform: translate(-50%, -50%);
     }
@@ -601,11 +591,12 @@ body{
         width: 100%;
         height: 90%;
     }
+    td{
+        padding:35px;
+        font-size: 10px;
+    }
     .doors{
         font-size: 0.9em;
-    }
-    td{
-        padding: 25px;
     }
 }
 @media (min-width:720px) and (max-width:1023px){
