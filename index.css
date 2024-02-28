@@ -34,8 +34,8 @@ body {
 .all-data-container{
     display: flex;
     justify-content:space-around;
-    min-width: 1358px;
-    min-height: 561px;
+    max-width: 1375px;
+    max-height: 561px;
     margin-top: 30px;
 }
 .other-display{
@@ -51,13 +51,12 @@ body {
     height: 60%;
 }
 .minimal-details-info{
+    margin-top: -280px;
+    margin-left: 50px;
     width: 250px;
     height: 360px;
     background-color: rgba(211, 211, 211, 0.767);
-    border-radius: 20px;
-    position: fixed;
-    top: 47%; 
-    left: 110px;      
+    border-radius: 20px;     
     transform: translateY(-50%);
     display: flex;
     justify-content: center;
@@ -276,8 +275,8 @@ h1{
         "wdth" 100;
 }
 #table-container{
-    min-width: 811px;
-    min-height: 561px;
+    max-width: 811px;
+    max-height: 561px;
     margin-right: 30px;
 }
 table {
@@ -495,139 +494,121 @@ span.desk {
         "wdth" 100;
 
 }
+body{
+    margin-top: 100px;
+}
 .header-container{
+    padding-top: 20px;
     display: none;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 .below-teacher-details{
     display: none;
+    justify-content: space-evenly;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
-@media screen and (max-width: 2500px){
-    body{
-        margin-top: 100px;
-    }
+.sec-sub{
+    width: 10%;
+}
+.inst-tdate{
+    width: 15%;
+}
+.below-teacher-details p{
+    display: inline-flex;
+}
+@media (min-width:1500px) and (max-width:1900px) {
     .header-container{
-        padding-top: 20px;
         display: block;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+        font-size: 1em;
         position: fixed;
-        top: 0;
-
-        font-family: "Open Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 800;
-        font-style: normal;
-        font-variation-settings:
-            "wdth" 100;
-    }
-    .minimal-details-info{
-        top: 51%; 
-        left: 250px;
-        transition: all 0.6s ease-in-out;
+        top:-20px;
     }
     .below-teacher-details{
         display: flex;
-        justify-content: space-around;
-
-        font-family: "Open Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        font-variation-settings:
-            "wdth" 100;
+        
     }
     .sec-sub{
-        width: 15%;
-    }
-    .inst-tdate{
-        width: 20%;
-    }
-    .below-teacher-details p{
-        display: inline-flex;
-    }
-}
-@media screen and (max-width: 1700px){
-    body{
-        margin-top: 100px;
-    }
-    .header-container{
-        padding-top: 20px;
         display: block;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        position: fixed;
-        top: 0;
-
-        font-family: "Open Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 800;
-        font-style: normal;
-        font-variation-settings:
-            "wdth" 100;
     }
     .minimal-details-info{
-        top: 51%; 
-        left: 150px;
-        transition: all 0.6s ease-in-out;
+        margin-top: -275px;
+        height: 60%;
+    }
+    body{
+        width: 100%;
+        position: fixed;
+        top: 40%; 
+        left: 50%; 
+        transform: translate(-50%, -50%);
+    }
+    .all-data-container{
+        margin-top: 85px;
+        margin-bottom: 20px;
+    }
+    td{
+        padding: 40px;
+    }
+}
+@media (min-width:1024px) and (max-width:1500px) {
+    .teacher-frontTable{
+        margin-top: 110px;
+        height: 150px;
+    }
+    .header-container{
+        display: block;
+        font-size: 1em;
+        position: fixed;
+        top:-20px;
     }
     .below-teacher-details{
         display: flex;
-        justify-content: space-around;
-
-        font-family: "Open Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        font-variation-settings:
-            "wdth" 100;
-    }
-    .sec-sub{
-        width: 15%;
-    }
-    .inst-tdate{
-        width: 20%;
-    }
-    .below-teacher-details p{
-        display: inline-flex;
-    }
-
-}
-
-@media screen and (max-width: 1502px){
-    body{
-        margin-top: initial;
-    }
-    header{
-        display: none;
-    }
-    .below-teacher-details{
-        display: none;
+        font-size: 0.8em;
     }
     .minimal-details-info{
-        top: 39%; 
-        left: 110px;
+        margin-top: -225px;
+        height: 70%;
     }
-}
-@media screen and (max-width: 1502px) and (min-height:600px){
+    .minimal-details-container h3{
+        font-size: 0.7em;
+    }
     body{
-        margin-top: initial;
+        width: 100%;
+        position: fixed;
+        top: 35%; 
+        left: 50%; 
+        transform: translate(-50%, -50%);
     }
-    header{
-        display: none;
+    .all-data-container{
+        margin-top: 85px;
+        margin-bottom: 30px;
+        width: 100%;
+        height: 90%;
     }
-    .below-teacher-details{
-        display: none;
+    .doors{
+        font-size: 0.9em;
     }
-    .minimal-details-info{
-        top: 47%; 
-        left: 110px;
+    td{
+        padding: 25px;
     }
 }
-@media (max-width:720px) {
+@media (min-width:720px) and (max-width:1023px){
     .show-student-data{
         display: none;
     }
@@ -670,6 +651,5 @@ span.desk {
         font-style: normal;
         font-variation-settings:
             "wdth" 100;
-    }   
-    
+    }  
 }
