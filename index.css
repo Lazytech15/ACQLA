@@ -571,6 +571,12 @@ body{
         margin-top: 170px;
         height: 150px;
     }
+    .table-sub-container{
+        margin-top: 50px;
+    }
+    .table-sub-container td{
+        font-size: 0.9em;
+    }
     .show-student-data{
         margin-top: 50px;
         height: 72%;
