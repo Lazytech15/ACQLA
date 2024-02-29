@@ -608,6 +608,12 @@ body{
     .doors{
         font-size: 0.9em;
     }
+    .sec-sub{
+        width: 15%;
+    }
+    .inst-tdate{
+        width: 20%;
+    }
 }
 @media (min-width:720px) and (max-width:1023px){
     .show-student-data{
