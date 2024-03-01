@@ -1,1 +1,420 @@
-const _0x2dedbc=_0x10fb;(function(_0x2cbfae,_0x5e56a0){const _0x31728b=_0x10fb,_0x166e8b=_0x2cbfae();while(!![]){try{const _0x539a6a=parseInt(_0x31728b(0x1fa))/0x1*(-parseInt(_0x31728b(0x1fb))/0x2)+parseInt(_0x31728b(0x1bc))/0x3+parseInt(_0x31728b(0x21e))/0x4*(-parseInt(_0x31728b(0x19d))/0x5)+parseInt(_0x31728b(0x204))/0x6*(-parseInt(_0x31728b(0x1af))/0x7)+parseInt(_0x31728b(0x222))/0x8+parseInt(_0x31728b(0x21c))/0x9*(-parseInt(_0x31728b(0x20e))/0xa)+-parseInt(_0x31728b(0x19e))/0xb*(-parseInt(_0x31728b(0x1e7))/0xc);if(_0x539a6a===_0x5e56a0)break;else _0x166e8b['push'](_0x166e8b['shift']());}catch(_0x32be3d){_0x166e8b['push'](_0x166e8b['shift']());}}}(_0x5501,0x84256));import{initializeApp}from'https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js';const firebaseConfig={'apiKey':_0x2dedbc(0x1c7),'authDomain':'cpprog03.firebaseapp.com','projectId':_0x2dedbc(0x20b),'storageBucket':'cpprog03.appspot.com','messagingSenderId':_0x2dedbc(0x21a),'appId':_0x2dedbc(0x221)},app=initializeApp(firebaseConfig);firebase[_0x2dedbc(0x1ce)](firebaseConfig);import{getFirestore,doc,getDoc,collection,addDoc,setDoc,updateDoc,deleteDoc,deleteField,onSnapshot}from'https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js';const db=getFirestore(),client=firebase[_0x2dedbc(0x1ac)]();let count,studeData,cells=Array[_0x2dedbc(0x19b)](document[_0x2dedbc(0x1ab)]('td'));function _0x10fb(_0x52e02b,_0x39a65f){const _0x550111=_0x5501();return _0x10fb=function(_0x10fb59,_0x5991bc){_0x10fb59=_0x10fb59-0x19a;let _0x343b60=_0x550111[_0x10fb59];return _0x343b60;},_0x10fb(_0x52e02b,_0x39a65f);}cells[_0x2dedbc(0x1a9)]()['forEach'](_0x5ce6da=>_0x5ce6da[_0x2dedbc(0x231)]['appendChild'](_0x5ce6da));const studentName=document[_0x2dedbc(0x213)]('studentName'),studentID=document[_0x2dedbc(0x213)](_0x2dedbc(0x21d)),studentSec=document[_0x2dedbc(0x213)](_0x2dedbc(0x1c0)),studentSub=document[_0x2dedbc(0x213)](_0x2dedbc(0x220)),pcunit=document[_0x2dedbc(0x213)](_0x2dedbc(0x1d8)),DateHour=document[_0x2dedbc(0x213)](_0x2dedbc(0x1b4)),stud_late=document[_0x2dedbc(0x213)](_0x2dedbc(0x22a)),stud_ontime=document[_0x2dedbc(0x213)](_0x2dedbc(0x1a2)),toccupied=document[_0x2dedbc(0x213)](_0x2dedbc(0x214)),pcavailable=document[_0x2dedbc(0x213)](_0x2dedbc(0x1fd)),donwload_btn=document[_0x2dedbc(0x213)](_0x2dedbc(0x1cc)),reset_btn=document[_0x2dedbc(0x213)](_0x2dedbc(0x1ea)),signin_btn=document['getElementById'](_0x2dedbc(0x1a1)),cancel_teacher=document[_0x2dedbc(0x213)](_0x2dedbc(0x1dd)),teacher_name=document['getElementById'](_0x2dedbc(0x212)),teacher_sub=document[_0x2dedbc(0x213)](_0x2dedbc(0x1f3)),teacher_sec=document['getElementById'](_0x2dedbc(0x200)),confirm_btn=document[_0x2dedbc(0x213)]('confirm_btn'),below_sub=document['getElementById'](_0x2dedbc(0x211)),below_sec=document['getElementById']('below-sec'),below_instuctor=document['getElementById'](_0x2dedbc(0x209)),below_dtime=document[_0x2dedbc(0x213)](_0x2dedbc(0x1bf));let deskStat=[],dataID;async function checkSit(){const _0x30a99d=_0x2dedbc;let _0x8af572=[];client['collection'](_0x30a99d(0x1f9))[_0x30a99d(0x1ca)]('createdAt')[_0x30a99d(0x1b2)](_0x532d89=>{const _0x4780a4=_0x30a99d;_0x532d89[_0x4780a4(0x1a4)](_0x47baae=>{const _0x409e05=_0x4780a4;studeData=_0x47baae['data'](),dataID=_0x47baae['id'],deskStat['push']({...studeData,'dataID':dataID}),_0x8af572[_0x409e05(0x20c)]({...studeData});}),csvData(_0x8af572),deskStat['forEach'](_0xa39f92=>{const _0x1996d6=_0x4780a4;if(_0xa39f92[_0x1996d6(0x22b)]===_0x1996d6(0x210)&&_0xa39f92['SchoolOnTime']===_0x1996d6(0x223))toccupied['innerHTML']=Number(toccupied[_0x1996d6(0x1f7)])+0x1,stud_late[_0x1996d6(0x1f7)]=Number(stud_late[_0x1996d6(0x1f7)])+0x1,pcavailable[_0x1996d6(0x1f7)]=Number(pcavailable[_0x1996d6(0x1f7)])-0x1,cells[_0xa39f92[_0x1996d6(0x202)]]['style']=_0x1996d6(0x1d2),cells[_0xa39f92[_0x1996d6(0x202)]][_0x1996d6(0x1f7)]=_0x1996d6(0x22e)+_0xa39f92['Com_Unit_Num']+_0x1996d6(0x230)+'Occupied!\x20<br>\x20BUT\x20LATE!';else _0xa39f92[_0x1996d6(0x22b)]===_0x1996d6(0x210)&&_0xa39f92[_0x1996d6(0x1ec)]===_0x1996d6(0x1f8)?(toccupied[_0x1996d6(0x1f7)]=Number(toccupied['innerHTML'])+0x1,stud_ontime[_0x1996d6(0x1f7)]=Number(stud_ontime[_0x1996d6(0x1f7)])+0x1,pcavailable['innerHTML']=Number(pcavailable[_0x1996d6(0x1f7)])-0x1,cells[_0xa39f92['Desk']][_0x1996d6(0x1ad)]=_0x1996d6(0x1df),cells[_0xa39f92[_0x1996d6(0x202)]][_0x1996d6(0x1f7)]=_0x1996d6(0x22e)+_0xa39f92[_0x1996d6(0x1aa)]+_0x1996d6(0x230)+_0x1996d6(0x1f2)):cells[_0xa39f92[_0x1996d6(0x202)]][_0x1996d6(0x1ad)]='background-color:\x20white;\x20padding:10px';});});}async function deletData(){const _0x514bdb=_0x2dedbc;client[_0x514bdb(0x1f1)]('COMLAB-ATTENDANCE-TABLE')[_0x514bdb(0x232)]()[_0x514bdb(0x1b5)](_0x36bcdf=>{const _0x54831f=_0x514bdb;_0x36bcdf[_0x54831f(0x217)]!==0x0?(client[_0x54831f(0x1f1)](_0x54831f(0x1f9))[_0x54831f(0x232)]()[_0x54831f(0x1b5)](_0x4d80b2=>{const _0x21e330=_0x54831f;_0x4d80b2[_0x21e330(0x1a4)](_0x21761b=>{const _0x3b77ca=_0x21e330,_0x4aaef7=_0x21761b['id'],_0x3cad43=doc(db,_0x3b77ca(0x1f9),_0x4aaef7);deleteDoc(_0x3cad43);const _0x176ad2=doc(db,'TEACHER-DATA',_0x3b77ca(0x1e3));deleteDoc(_0x176ad2);});}),client['collection'](_0x54831f(0x1e9))[_0x54831f(0x232)]()[_0x54831f(0x1b5)](_0x356da5=>{const _0x5afc84=_0x54831f;_0x356da5[_0x5afc84(0x1a4)](_0x2f8a07=>{const _0xc6b22f=_0x5afc84,_0x51bfac=_0x2f8a07['id'],_0x4b593c=doc(db,_0xc6b22f(0x1f9),_0x51bfac);deleteDoc(_0x4b593c);});})):(document[_0x54831f(0x213)](_0x54831f(0x19a))[_0x54831f(0x1f7)]=_0x54831f(0x1e6),document[_0x54831f(0x213)](_0x54831f(0x19a))[_0x54831f(0x1ad)]['textAlign']=_0x54831f(0x1b0),myPopup[_0x54831f(0x20f)]['add'](_0x54831f(0x1ef)));});}const minimaldetails=document[_0x2dedbc(0x213)]('minimal-details-info'),infodetails=document[_0x2dedbc(0x213)](_0x2dedbc(0x1d6));document[_0x2dedbc(0x1fe)](_0x2dedbc(0x1b9),async function(){const _0x498b7e=_0x2dedbc;for(let _0x3a9fe7=0x0;_0x3a9fe7<cells[_0x498b7e(0x1c2)];_0x3a9fe7++){(function(_0x182322){const _0x1c91f6=_0x498b7e;cells[_0x182322][_0x1c91f6(0x1fe)]('pointerenter',function(){const _0x510b4c=_0x1c91f6;cells[_0x182322]['innerHTML']!==''?deskStat['forEach'](_0xcec57=>{const _0x2d9592=_0x10fb,_0x4bc211=_0xcec57['Desk'];_0x182322==_0x4bc211&&(pcunit[_0x2d9592(0x1f7)]=_0xcec57[_0x2d9592(0x1aa)],studentName['innerHTML']=_0xcec57[_0x2d9592(0x1c9)],studentID[_0x2d9592(0x1f7)]=_0xcec57[_0x2d9592(0x1d0)],studentSec[_0x2d9592(0x1f7)]=_0xcec57['Student_Section'],studentSub[_0x2d9592(0x1f7)]=_0xcec57[_0x2d9592(0x1c5)],DateHour[_0x2d9592(0x1f7)]=_0xcec57[_0x2d9592(0x219)]),document[_0x2d9592(0x213)](_0x2d9592(0x1d6))[_0x2d9592(0x1ad)]='display:\x20flex;',minimaldetails[_0x2d9592(0x1ad)][_0x2d9592(0x1f0)]='0',minimaldetails[_0x2d9592(0x1ad)][_0x2d9592(0x20a)]='0';}):(minimaldetails['style']['opacity']='1',minimaldetails[_0x510b4c(0x1ad)][_0x510b4c(0x20a)]='1000px',infodetails[_0x510b4c(0x1ad)]['opacity']='0',infodetails[_0x510b4c(0x1ad)][_0x510b4c(0x20a)]='0');}),cells[_0x182322][_0x1c91f6(0x1fe)]('click',function(){const _0x483e8e=_0x1c91f6;if(cells[_0x182322]['innerHTML']!==''||cells[_0x182322][_0x483e8e(0x1ad)][_0x483e8e(0x1d9)]==_0x483e8e(0x21f)){const _0x2eff71=confirm('Are\x20you\x20sure\x20that\x20you\x20want\x20to\x20delete\x20this\x20entry?');if(_0x2eff71){const _0x42067c=doc(db,'COMLAB-ATTENDANCE-TABLE',_0x483e8e(0x1eb)+_0x182322);deleteDoc(_0x42067c);const _0x7765c0=doc(db,'SOME-IS-TYPING',_0x483e8e(0x1eb)+_0x182322);deleteDoc(_0x7765c0),document[_0x483e8e(0x213)](_0x483e8e(0x1e5))[_0x483e8e(0x1ad)]=_0x483e8e(0x201),document[_0x483e8e(0x213)](_0x483e8e(0x19a))[_0x483e8e(0x1f7)]=_0x483e8e(0x1b7),document[_0x483e8e(0x213)](_0x483e8e(0x19a))[_0x483e8e(0x1ad)]['textAlign']=_0x483e8e(0x1b0),myPopup['classList'][_0x483e8e(0x1cb)](_0x483e8e(0x1ef));}}else document[_0x483e8e(0x213)](_0x483e8e(0x19a))[_0x483e8e(0x1f7)]=_0x483e8e(0x215),document[_0x483e8e(0x213)](_0x483e8e(0x19a))['style']['textAlign']=_0x483e8e(0x1b0),myPopup[_0x483e8e(0x20f)][_0x483e8e(0x1cb)](_0x483e8e(0x1ef));});}(_0x3a9fe7));}});async function TypingCheck(){const _0x1739cf=_0x2dedbc;let _0x394a62=[];for(let _0x8f3941=0x0;_0x8f3941<cells[_0x1739cf(0x1c2)];_0x8f3941++){client['collection'](_0x1739cf(0x1e9))[_0x1739cf(0x1b2)](_0x4d78d5=>{const _0x97bbbd=_0x1739cf;_0x4d78d5[_0x97bbbd(0x1a4)](_0x39919a=>{const _0xd9dd72=_0x39919a['data']()['Desk'];cells[_0xd9dd72]['style']='background-color:\x20purple;\x20padding:\x2010px;\x20',_0x394a62=_0xd9dd72;}),_0x394a62===_0x8f3941&&(cells[_0x8f3941]['style']='background-color:\x20white;\x20padding:\x2010px;\x20');});}}function _0x5501(){const _0x36deea=['\x20STUDENT\x20NUMBER\x20\x20','below-instuctor','maxHeight','cpprog03','push','Teacher_Subjects','242230IEldzW','classList','Occupied','below-sub','teacher_name','getElementById','toccupied','Its\x20seems\x20nothing\x20is\x20in\x20here','\x20COURSE\x20CODE\x20\x20','size','Time_Date','Date_Scan','316552887176','.download-btn','99PoqDSU','studentID','103640dfBmKK','purple','studentsub','1:316552887176:web:2d8b0fc17477132873d83d','3729912wFkrpn','true','remove','It\x27s\x20seem\x20that\x20there\x20is\x20no\x20data\x20yet!','\x0a\x20\x20\x20\x20\x20\x20<td>','table_to_book','encode_cell','Teacher_Name','stud_late','Status','map','application/octet-stream','<span\x20class=\x22desk\x22>','table-sub-container','</span>','parentNode','get','pop-up-message','from','!cols','10uUQVLe','7895789zYJFfF','charCodeAt','TEACHER-DATA','signin_btn','stud_ontime','Sheets','forEach','Attendance','none','\x20PC\x20NUMBER\x20','\x20LATE\x20','reverse','Com_Unit_Num','getElementsByTagName','firestore','style','onload','623qjdXsp','center','xlsx','onSnapshot','.cancel-btn','TimeDate','then','Teacher_Section','Delete\x20Data\x20Successfully!','getMinutes','DOMContentLoaded','contains','utils','3190719JPApnM','fromCharCode','removeChild','below-date/time','studentSection','createElement','length','click','getDate','Student_Course','appendChild','AIzaSyCOB2qEHCqj4ogZdjIH4Ff-tl-StyLShOk','old','Student_Name','orderBy','add','donwload_btn','textAlign','initializeApp','\x20STUDENT\x20NAME\x20\x20','Student_ID','new','background-color:\x20yellow;\x20padding:10px;\x20color:\x20navy;','querySelector','flex','</td>\x0a\x20\x20\x20\x20\x20\x20<td>','info-container','teacher-form-container','pcnum','backgroundColor','split','\x0a\x20\x20\x20\x20<th></th>\x0a\x20\x20\x20\x20<th></th>\x0a\x20\x20\x20\x20<th></th>\x0a\x20\x20\x20\x20<th></th>\x0a\x20\x20\x20\x20<th></th>\x0a\x20\x20\x20\x20<th></th>\x0a\x20\x20\x20\x20<th></th>\x0a\x20\x20\x20\x20<th></th>\x0a\x20\x20','getMonth','cancel-teacher','binary','background-color:\x20red;\x20padding:10px;','value','target','!ref','TEACHER-DOC','\x20INSTRUCTOR\x20','pop-up-top','Its\x20seems\x20like\x20the\x20data\x20is\x20not\x20deleted\x20yet,\x20its\x20probably\x20the\x20network\x20is\x20kinda\x20slow','12RDiWHk','slice','SOME-IS-TYPING','reset_btn','B1-28_DESKTOPPCNUMBER-','SchoolOnTime','Data\x20uploaded,\x20student\x20will\x20now\x20take\x20the\x20pc\x20and\x20attendance\x20also','Reset\x20Data\x20successfully!','show','opacity','collection','Occupied!\x20<br>\x20Ontime','teacher_sub','data','display','Student_Section','innerHTML','false','COMLAB-ATTENDANCE-TABLE','395985OBzTvh','2wFpQVs','student-container','pcavailable','addEventListener','Download\x20Complete!\x20it\x20will\x20reset\x20all,\x20thank\x20you\x20for\x20using\x20ACQLA\x20your\x20simple\x20yet\x20useful\x20Online\x20Attendance','teacher_sec','display:none','Desk','No\x20data\x20to\x20download','66882AWYCfK','Please\x20complete\x20the\x20sign\x20in','reload','</td>\x0a\x20\x20\x20\x20'];_0x5501=function(){return _0x36deea;};return _0x5501();}async function TeacherCheck(){const _0x254c66=_0x2dedbc;client['collection'](_0x254c66(0x1a0))['onSnapshot'](_0x100919=>{const _0x34c6ab=_0x254c66;_0x100919[_0x34c6ab(0x1a4)](_0x428141=>{const _0x5433c5=_0x34c6ab,_0x4a01fd=_0x428141['data']()['Teacher_Name'],_0x3f6f9d=_0x428141[_0x5433c5(0x1f4)]()[_0x5433c5(0x1b6)],_0x46b152=_0x428141['data']()[_0x5433c5(0x20d)],_0x13234e=_0x428141[_0x5433c5(0x1f4)]()[_0x5433c5(0x218)];below_instuctor[_0x5433c5(0x1f7)]='\x20'+_0x4a01fd,below_sec[_0x5433c5(0x1f7)]='\x20'+_0x3f6f9d,below_sub['innerHTML']='\x20'+_0x46b152,below_dtime[_0x5433c5(0x1f7)]='\x20'+_0x13234e;});});}window[_0x2dedbc(0x1ae)]=function(){TypingCheck(),TeacherCheck(),checkSit();};function getDateHour(){const _0x3cb91c=_0x2dedbc;let _0x273508=new Date(),_0x350c34=_0x273508['getHours'](),_0x110bcd=_0x273508[_0x3cb91c(0x1b8)](),_0x44a7f6=_0x350c34>=0xc?'pm':'am';_0x350c34=_0x350c34%0xc,_0x350c34=_0x350c34?_0x350c34:0xc,_0x110bcd=_0x110bcd<0xa?'0'+_0x110bcd:_0x110bcd;let _0x380176=_0x350c34+':'+_0x110bcd+_0x44a7f6,_0x5634e2=('0'+_0x273508[_0x3cb91c(0x1c4)]())[_0x3cb91c(0x1e8)](-0x2),_0x530a61=('0'+(_0x273508[_0x3cb91c(0x1dc)]()+0x1))['slice'](-0x2),_0x164ae2=_0x273508['getFullYear'](),_0xc43a85=_0x530a61+'/'+_0x5634e2+'/'+_0x164ae2,_0x8d5687=_0x380176+'\x20'+_0xc43a85;return _0x8d5687;}signin_btn[_0x2dedbc(0x1fe)](_0x2dedbc(0x1c3),function(){const _0x16618=_0x2dedbc;document[_0x16618(0x213)](_0x16618(0x1d7))['style'][_0x16618(0x1f5)]=_0x16618(0x1d4);}),cancel_teacher[_0x2dedbc(0x1fe)](_0x2dedbc(0x1c3),function(){const _0x10b8ad=_0x2dedbc;document['getElementById'](_0x10b8ad(0x1d7))[_0x10b8ad(0x1ad)][_0x10b8ad(0x1f5)]=_0x10b8ad(0x1a6);}),confirm_btn[_0x2dedbc(0x1fe)]('click',function(){const _0x28f840=_0x2dedbc;if(teacher_name[_0x28f840(0x1e0)]==''||teacher_sec[_0x28f840(0x1e0)]==''||teacher_sub[_0x28f840(0x1e0)]=='')document[_0x28f840(0x213)]('pop-up-message')[_0x28f840(0x1f7)]=_0x28f840(0x205),document[_0x28f840(0x213)](_0x28f840(0x19a))[_0x28f840(0x1ad)]['textAlign']=_0x28f840(0x1b0),myPopup[_0x28f840(0x20f)][_0x28f840(0x1cb)](_0x28f840(0x1ef));else{const _0x428c6c=doc(db,'TEACHER-DATA','TEACHER-DOC');setDoc(_0x428c6c,{'Teacher_Name':teacher_name[_0x28f840(0x1e0)],'Teacher_Subjects':teacher_sub[_0x28f840(0x1e0)],'Teacher_Section':teacher_sec[_0x28f840(0x1e0)],'Time_Date':getDateHour()}),document[_0x28f840(0x213)]('pop-up-top')[_0x28f840(0x1ad)]=_0x28f840(0x201),document['getElementById'](_0x28f840(0x19a))[_0x28f840(0x1f7)]=_0x28f840(0x1ed),document[_0x28f840(0x213)](_0x28f840(0x19a))[_0x28f840(0x1ad)][_0x28f840(0x1cd)]=_0x28f840(0x1b0),myPopup[_0x28f840(0x20f)][_0x28f840(0x1cb)](_0x28f840(0x1ef)),document[_0x28f840(0x213)](_0x28f840(0x1d7))[_0x28f840(0x1ad)]['display']='none',teacher_name[_0x28f840(0x1e0)]='',teacher_sec['value']='',teacher_sub['value']='';}}),reset_btn[_0x2dedbc(0x1fe)](_0x2dedbc(0x1c3),function(){const _0x440360=_0x2dedbc;deskStat==''?(document[_0x440360(0x213)](_0x440360(0x1e5))[_0x440360(0x1ad)]=_0x440360(0x201),document[_0x440360(0x213)]('pop-up-message')[_0x440360(0x1f7)]=_0x440360(0x225),document[_0x440360(0x213)](_0x440360(0x19a))[_0x440360(0x1ad)][_0x440360(0x1cd)]=_0x440360(0x1b0),myPopup[_0x440360(0x20f)][_0x440360(0x1cb)]('show')):(document[_0x440360(0x213)](_0x440360(0x1e5))['style']=_0x440360(0x201),document[_0x440360(0x213)](_0x440360(0x19a))[_0x440360(0x1f7)]=_0x440360(0x1ee),document[_0x440360(0x213)](_0x440360(0x19a))['style']['textAlign']=_0x440360(0x1b0),myPopup[_0x440360(0x20f)][_0x440360(0x1cb)](_0x440360(0x1ef)),deletData());});function csvData(_0xb3c72e){const _0x21bcc2=_0x2dedbc,_0x59ca46=document[_0x21bcc2(0x213)](_0x21bcc2(0x1fc)),_0x1c88f2=document[_0x21bcc2(0x1c1)]('tr');_0x1c88f2[_0x21bcc2(0x1f7)]=_0x21bcc2(0x1db),_0x59ca46[_0x21bcc2(0x1c6)](_0x1c88f2),_0xb3c72e['forEach'](_0x4d50f8=>{const _0xdde234=_0x21bcc2,_0x11953d=document[_0xdde234(0x1c1)]('tr');_0x11953d[_0xdde234(0x1f7)]=_0xdde234(0x226)+_0x4d50f8[_0xdde234(0x1d0)]+_0xdde234(0x1d5)+_0x4d50f8[_0xdde234(0x1c9)]+'</td>\x0a\x20\x20\x20\x20\x20\x20<td>'+_0x4d50f8[_0xdde234(0x1f6)]+_0xdde234(0x1d5)+_0x4d50f8[_0xdde234(0x1c5)]+_0xdde234(0x1d5)+_0x4d50f8[_0xdde234(0x1aa)]+_0xdde234(0x1d5)+_0x4d50f8[_0xdde234(0x229)]+_0xdde234(0x1d5)+_0x4d50f8[_0xdde234(0x219)]+'</td>\x0a\x20\x20\x20\x20\x20\x20<td>'+_0x4d50f8[_0xdde234(0x1ec)]+_0xdde234(0x207),_0x59ca46[_0xdde234(0x1c6)](_0x11953d);});const _0x300ef1=document[_0x21bcc2(0x1c1)]('tr');_0x300ef1[_0x21bcc2(0x1f7)]='\x0a\x20\x20\x20\x20<td\x20colspan=\x228\x22><button\x20class=\x22download-btn\x22>DOWNLOAD</button><button\x20class=\x22cancel-btn\x22>CANCEL</button></td>\x0a\x20\x20\x20\x20\x0a\x20\x20',_0x59ca46[_0x21bcc2(0x1c6)](_0x300ef1);const _0x154a20=_0x300ef1[_0x21bcc2(0x1d3)](_0x21bcc2(0x1b3)),_0xa50286=_0x300ef1[_0x21bcc2(0x1d3)](_0x21bcc2(0x21b)),_0x446a30=[{'old':'Student_ID','new':_0x21bcc2(0x208)},{'old':_0x21bcc2(0x1c9),'new':_0x21bcc2(0x1cf)},{'old':_0x21bcc2(0x1f6),'new':'\x20SECTION\x20'},{'old':_0x21bcc2(0x1c5),'new':_0x21bcc2(0x216)},{'old':_0x21bcc2(0x1aa),'new':_0x21bcc2(0x1a7)},{'old':'Teacher_Name','new':_0x21bcc2(0x1e4)},{'old':_0x21bcc2(0x219),'new':'\x20TIME/DATE\x20SCANNED\x20'},{'old':_0x21bcc2(0x1ec),'new':_0x21bcc2(0x1a8)}];_0x154a20[_0x21bcc2(0x1fe)](_0x21bcc2(0x1c3),()=>{const _0x49f8e5=_0x21bcc2;document[_0x49f8e5(0x213)]('table-sub-container')['style'][_0x49f8e5(0x1f5)]=_0x49f8e5(0x1a6);}),_0xa50286[_0x21bcc2(0x1fe)](_0x21bcc2(0x1c3),()=>{const _0x15ed23=_0x21bcc2;_0x59ca46[_0x15ed23(0x1be)](_0x300ef1);let _0x5cc89a=XLSX[_0x15ed23(0x1bb)][_0x15ed23(0x227)](document[_0x15ed23(0x213)](_0x15ed23(0x1fc)),{'sheet':'Attendance'});const _0x1b6194=_0x5cc89a[_0x15ed23(0x1a3)][_0x15ed23(0x1a5)];for(let _0x3eff6d=0x0;_0x3eff6d<_0x446a30['length'];_0x3eff6d++){const _0x216b94=_0x446a30[_0x3eff6d][_0x15ed23(0x1c8)],_0x530b4f=_0x446a30[_0x3eff6d][_0x15ed23(0x1d1)];_0x1b6194[XLSX[_0x15ed23(0x1bb)][_0x15ed23(0x228)]({'r':0x0,'c':_0x3eff6d})]={'v':_0x530b4f,'t':'s'};}let _0x24b680=[];for(let _0x111ee0=0x0;_0x111ee0!=_0x1b6194['!ref']['split'](':')[0x1][_0x15ed23(0x19f)](0x0)-'A'['charCodeAt'](0x0)+0x1;++_0x111ee0){let _0x4e2346=0x0;for(let _0x426a08=0x0;_0x426a08!=_0x1b6194[_0x15ed23(0x1e2)][_0x15ed23(0x1da)](':')[0x1][_0x15ed23(0x1e8)](0x1);++_0x426a08){let _0x1ebb3f=_0x1b6194[String[_0x15ed23(0x1bd)]('A'['charCodeAt'](0x0)+_0x111ee0)+(_0x426a08+0x1)];if(_0x1ebb3f!==undefined&&_0x1ebb3f['v'][_0x15ed23(0x1c2)]>_0x4e2346)_0x4e2346=_0x1ebb3f['v'][_0x15ed23(0x1c2)];}_0x24b680[_0x15ed23(0x20c)](_0x4e2346);}_0x1b6194[_0x15ed23(0x19c)]=_0x24b680[_0x15ed23(0x22c)](_0x5939f9=>({'wch':_0x5939f9}));let _0x58c02b=XLSX['write'](_0x5cc89a,{'bookType':_0x15ed23(0x1b1),'bookSST':!![],'type':_0x15ed23(0x1de)});saveAs(new Blob([_0x2efb0b(_0x58c02b)],{'type':_0x15ed23(0x22d)}),'ComLab-Attendance.xlsx'),_0x59ca46[_0x15ed23(0x1c6)](_0x300ef1),deletData(),document[_0x15ed23(0x213)](_0x15ed23(0x1e5))[_0x15ed23(0x1ad)]=_0x15ed23(0x201),document[_0x15ed23(0x213)](_0x15ed23(0x19a))[_0x15ed23(0x1f7)]=_0x15ed23(0x1ff),document[_0x15ed23(0x213)]('pop-up-message')['style']['textAlign']=_0x15ed23(0x1b0),myPopup[_0x15ed23(0x20f)][_0x15ed23(0x1cb)](_0x15ed23(0x1ef)),setInterval(function(){const _0x154a70=_0x15ed23;location[_0x154a70(0x206)]();},0xbb8);});function _0x2efb0b(_0x5df085){const _0x4e2ece=_0x21bcc2;var _0xf04e48=new ArrayBuffer(_0x5df085[_0x4e2ece(0x1c2)]),_0x989530=new Uint8Array(_0xf04e48);for(var _0x38bc95=0x0;_0x38bc95<_0x5df085[_0x4e2ece(0x1c2)];_0x38bc95++)_0x989530[_0x38bc95]=_0x5df085[_0x4e2ece(0x19f)](_0x38bc95)&0xff;return _0xf04e48;}}donwload_btn[_0x2dedbc(0x1fe)]('click',function(){const _0x5e7a1e=_0x2dedbc;deskStat==''?(document[_0x5e7a1e(0x213)]('pop-up-top')[_0x5e7a1e(0x1ad)]='display:none',document[_0x5e7a1e(0x213)](_0x5e7a1e(0x19a))['innerHTML']=_0x5e7a1e(0x203),document[_0x5e7a1e(0x213)](_0x5e7a1e(0x19a))[_0x5e7a1e(0x1ad)][_0x5e7a1e(0x1cd)]=_0x5e7a1e(0x1b0),myPopup[_0x5e7a1e(0x20f)][_0x5e7a1e(0x1cb)](_0x5e7a1e(0x1ef))):document[_0x5e7a1e(0x213)](_0x5e7a1e(0x22f))[_0x5e7a1e(0x1ad)][_0x5e7a1e(0x1f5)]=_0x5e7a1e(0x1d4);}),closePopup[_0x2dedbc(0x1fe)](_0x2dedbc(0x1c3),function(){const _0x53c007=_0x2dedbc;myPopup['classList']['remove'](_0x53c007(0x1ef));}),window[_0x2dedbc(0x1fe)]('click',function(_0x4dad44){const _0x14ac29=_0x2dedbc;_0x4dad44[_0x14ac29(0x1e1)]==myPopup&&myPopup['classList'][_0x14ac29(0x224)](_0x14ac29(0x1ef));}),setInterval(function(){const _0x1618b7=_0x2dedbc;if(document['getElementById']('teacher-form-container')[_0x1618b7(0x1ad)]['display']===_0x1618b7(0x1d4)||document[_0x1618b7(0x213)](_0x1618b7(0x22f))[_0x1618b7(0x1ad)][_0x1618b7(0x1f5)]===_0x1618b7(0x1d4)||myPopup[_0x1618b7(0x20f)][_0x1618b7(0x1ba)](_0x1618b7(0x1ef))||infodetails[_0x1618b7(0x1ad)][_0x1618b7(0x1f0)]!=='0'){}else count<0x3?count++:(location[_0x1618b7(0x206)](),count='');},0x2710);
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCOB2qEHCqj4ogZdjIH4Ff-tl-StyLShOk",
+  authDomain: "cpprog03.firebaseapp.com",
+  projectId: "cpprog03",
+  storageBucket: "cpprog03.appspot.com",
+  messagingSenderId: "316552887176",
+  appId: "1:316552887176:web:2d8b0fc17477132873d83d"
+};
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig);
+
+  import {
+    getFirestore, doc, getDoc, collection, addDoc, setDoc, updateDoc, deleteDoc, deleteField, onSnapshot
+  }
+  from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
+  
+  const db = getFirestore();
+  const client = firebase.firestore();
+  let count;
+  let studeData;
+  let cells = Array.from(document.getElementsByTagName('td'));
+      cells.reverse().forEach(cell => cell.parentNode.appendChild(cell));
+  const studentName = document.getElementById('studentName');
+  const studentID = document.getElementById('studentID');
+  const studentSec = document.getElementById('studentSection');
+  const studentSub = document.getElementById('studentsub');
+  const pcunit = document.getElementById('pcnum');
+  const DateHour = document.getElementById('TimeDate');
+  const stud_late = document.getElementById('stud_late');
+  const stud_ontime = document.getElementById('stud_ontime');
+  const toccupied = document.getElementById('toccupied');
+  const pcavailable = document.getElementById('pcavailable');
+  const donwload_btn = document.getElementById('donwload_btn');
+  const reset_btn = document.getElementById('reset_btn');
+  const signin_btn = document.getElementById('signin_btn');
+  const cancel_teacher = document.getElementById('cancel-teacher');
+  const teacher_name = document.getElementById('teacher_name');
+  const teacher_sub = document.getElementById('teacher_sub');
+  const teacher_sec = document.getElementById('teacher_sec');
+  const confirm_btn = document.getElementById('confirm_btn');
+  const below_sub = document.getElementById("below-sub");
+  const below_sec = document.getElementById("below-sec");
+  const below_instuctor = document.getElementById("below-instuctor");
+  const below_dtime = document.getElementById("below-date/time");
+  let deskStat=[];
+  let dataID;
+
+  async function checkSit(){
+    let ToTransfer = [];
+    client.collection("COMLAB-ATTENDANCE-TABLE").orderBy('createdAt').onSnapshot((querySnapshot) => {
+      querySnapshot.forEach((studentdata) => {
+        studeData = studentdata.data();
+        dataID = studentdata.id;
+        deskStat.push({ ...studeData,dataID});
+        ToTransfer.push({...studeData});
+  })
+  csvData(ToTransfer)
+      deskStat.forEach((data)=>{
+        if (data.Status==="Occupied" && data.SchoolOnTime==="true"){
+          toccupied.innerHTML = Number(toccupied.innerHTML) + 1;
+          stud_late.innerHTML = Number(stud_late.innerHTML) + 1;
+          pcavailable.innerHTML = Number(pcavailable.innerHTML) -1;
+          cells[data.Desk].style = "background-color: yellow; padding:10px; height: 50px; color: navy;";
+          cells[data.Desk].innerHTML = '<span class="desk">' + data.Com_Unit_Num + '</span>' + "Occupied! <br> BUT LATE!";
+        }else if (data.Status==="Occupied" && data.SchoolOnTime==="false"){
+          toccupied.innerHTML = Number(toccupied.innerHTML) + 1;
+          stud_ontime.innerHTML = Number(stud_ontime.innerHTML) + 1;
+          pcavailable.innerHTML = Number(pcavailable.innerHTML) -1;
+          cells[data.Desk].style = "background-color: red; padding:10px; height: 50px;";
+          cells[data.Desk].innerHTML = '<span class="desk">' + data.Com_Unit_Num + '</span>' + "Occupied! <br> Ontime";
+        }else{
+          cells[data.Desk].style = "background-color: white; padding:10px;";
+        }
+      })
+    })
+  }
+
+  
+    
+async function deletData(){
+  client.collection("COMLAB-ATTENDANCE-TABLE").get().then((querySnapshot) => {
+    if(querySnapshot.size !== 0){
+      client.collection("COMLAB-ATTENDANCE-TABLE").get().then((querySnapshot) => {
+        querySnapshot.forEach((studentdata) => {
+          const dataID = studentdata.id;
+          const ToDelete = doc(db,"COMLAB-ATTENDANCE-TABLE",dataID);
+          deleteDoc(ToDelete);
+          const ToDel = doc(db,"TEACHER-DATA","TEACHER-DOC");
+          deleteDoc(ToDel);
+          client.collection("SOME-IS-TYPING").get().then((querySnapshot) => {
+            querySnapshot.forEach((studentdata) => {
+              const dataID = studentdata.id;
+              const ToDelete = doc(db,"SOME-IS-TYPING",dataID);
+              deleteDoc(ToDelete);
+            })
+          })
+        })
+        })
+        
+    }else{
+      document.getElementById('pop-up-message').innerHTML="Its seems like the data is not deleted yet, its probably the network is kinda slow";
+      document.getElementById('pop-up-message').style.textAlign = "center";
+      myPopup.classList.add("show");
+    }
+  })
+}
+
+  const minimaldetails = document.getElementById('minimal-details-info');
+  const infodetails = document.getElementById('info-container');
+
+  document.addEventListener('DOMContentLoaded', async function() {
+    for (let i = 0; i < cells.length; i++) {
+      (function(i) {
+        cells[i].addEventListener('pointerenter', function() {
+          if(cells[i].innerHTML !== ""){
+            deskStat.forEach((onValue)=>{
+              const desk = onValue.Desk;
+              
+              if(i == desk){ 
+                pcunit.innerHTML = onValue.Com_Unit_Num;
+                studentName.innerHTML = onValue.Student_Name;
+                studentID.innerHTML = onValue.Student_ID;
+                studentSec.innerHTML = onValue.Student_Section;
+                studentSub.innerHTML = onValue.Student_Course;
+                DateHour.innerHTML = onValue.Date_Scan;
+              }
+              document.getElementById('info-container').style="display: flex;";
+              minimaldetails.style.opacity="0";
+              minimaldetails.style.maxHeight="0";
+              
+            }) 
+          }else{
+            minimaldetails.style.opacity="1";
+            minimaldetails.style.maxHeight="1000px";
+            infodetails.style.opacity="0";
+            infodetails.style.maxHeight="0";
+        } 
+        });
+        cells[i].addEventListener('click', function(){
+          if (cells[i].innerHTML !=="" || cells[i].style.backgroundColor=="purple"){
+            const userConfirmation = confirm("Are you sure that you want to delete this entry?");
+            if (userConfirmation) {
+              const ref = doc(db,"COMLAB-ATTENDANCE-TABLE","B1-28_DESKTOPPCNUMBER-"+i);
+                          deleteDoc(ref);
+              const docref = doc(db,"SOME-IS-TYPING","B1-28_DESKTOPPCNUMBER-"+i);
+                          deleteDoc(docref);
+              document.getElementById('pop-up-top').style="display:none";
+              document.getElementById('pop-up-message').innerHTML="Delete Data Successfully!";
+              document.getElementById('pop-up-message').style.textAlign = "center";
+              myPopup.classList.add("show");
+            }
+            
+          }else{
+              document.getElementById('pop-up-message').innerHTML="Its seems nothing is in here";
+              document.getElementById('pop-up-message').style.textAlign = "center";
+              myPopup.classList.add("show");
+          }
+          
+        })
+      })(i); 
+    }
+  });
+
+  async function TypingCheck(){
+    let noTyping=[];
+    
+    for (let c = 0; c < cells.length;c++){
+      client.collection("SOME-IS-TYPING").onSnapshot((querySnapshot) => {
+        querySnapshot.forEach((studentdata) => {
+          const desk = studentdata.data().Desk;
+          cells[desk].style = "background-color: purple;";
+          noTyping = desk;
+      })
+      if ( noTyping === c) {
+          cells[c].style = "background-color: white; padding: 10px; ";
+      }    
+      })
+
+    }
+    
+}
+
+async function TeacherCheck() {
+  client.collection('TEACHER-DATA').onSnapshot(querySnapshot => {
+    querySnapshot.forEach(teacherData => {
+      const teacherName = teacherData.data().Teacher_Name;
+      const studentSection = teacherData.data().Teacher_Section;
+      const StudentSubject = teacherData.data().Teacher_Subjects;
+      const TimeDate = teacherData.data().Time_Date;
+      below_instuctor.innerHTML = " " + teacherName;
+      below_sec.innerHTML = " " + studentSection;
+      below_sub.innerHTML = " " + StudentSubject;
+      below_dtime.innerHTML = " " + TimeDate;
+    });
+  });
+}
+
+window.onload = function() {
+  TypingCheck();
+  TeacherCheck();
+  checkSit();
+};
+
+function getDateHour(){
+  let date = new Date();
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let ampm = hours >= 12 ? 'pm' : 'am';
+  hours = hours % 12;
+  hours = hours ? hours : 12; 
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  
+  let strTime = hours + ':' + minutes + ampm;
+  
+  let day = ("0" + date.getDate()).slice(-2);
+  let month = ("0" + (date.getMonth() + 1)).slice(-2);
+  let year = date.getFullYear();
+  let strDate =  month + "/" + day + "/" + year;
+  let dateTime = strTime + " " + strDate;
+
+  return dateTime
+}
+
+/* all button  */
+
+signin_btn.addEventListener('click', function(){
+  document.getElementById('teacher-form-container').style.display="flex";
+})
+
+cancel_teacher.addEventListener('click', function(){
+  document.getElementById('teacher-form-container').style.display="none";
+})
+
+confirm_btn.addEventListener('click', function(){
+  if (teacher_name.value =="" || teacher_sec.value == "" || teacher_sub.value ==""){
+    document.getElementById('pop-up-message').innerHTML="Please complete the sign in";
+    document.getElementById('pop-up-message').style.textAlign = "center";
+    myPopup.classList.add("show");
+  }else{
+    const ref = doc(db, "TEACHER-DATA","TEACHER-DOC");
+                setDoc( 
+                ref, {
+                  Teacher_Name : teacher_name.value,
+                  Teacher_Subjects : teacher_sub.value,
+                  Teacher_Section : teacher_sec.value,
+                  Time_Date : getDateHour()
+
+            })
+            document.getElementById('pop-up-top').style="display:none";
+            document.getElementById('pop-up-message').innerHTML="Data uploaded, student will now take the pc and attendance also";
+            document.getElementById('pop-up-message').style.textAlign = "center";
+            myPopup.classList.add("show");
+            document.getElementById('teacher-form-container').style.display="none";
+            teacher_name.value="";
+            teacher_sec.value="";
+            teacher_sub.value="";
+  }
+})
+
+reset_btn.addEventListener('click', function(){
+  if (deskStat == ""){
+    document.getElementById('pop-up-top').style="display:none";
+    document.getElementById('pop-up-message').innerHTML="It's seem that there is no data yet!";
+    document.getElementById('pop-up-message').style.textAlign = "center";
+    myPopup.classList.add("show");
+  }else{
+    document.getElementById('pop-up-top').style="display:none";
+    document.getElementById('pop-up-message').innerHTML="Reset Data successfully!";
+    document.getElementById('pop-up-message').style.textAlign = "center";
+    myPopup.classList.add("show");
+  deletData();
+  }
+})
+
+function csvData(student) {
+  const tableBody = document.getElementById('student-container');
+
+  // Create a new row for the table header
+  const headerRow = document.createElement('tr');
+  headerRow.innerHTML = `
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  `;
+  tableBody.appendChild(headerRow);
+
+  student.forEach((students) => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${students.Student_ID}</td>
+      <td>${students.Student_Name}</td>
+      <td>${students.Student_Section}</td>
+      <td>${students.Student_Course}</td>
+      <td>${students.Com_Unit_Num}</td>
+      <td>${students.Teacher_Name}</td>
+      <td>${students.Date_Scan}</td>
+      <td>${students.SchoolOnTime}</td>
+    `;
+    tableBody.appendChild(row);
+  })
+
+  const downloadRow = document.createElement('tr');
+  downloadRow.innerHTML = `
+    <td colspan="8"><button class="download-btn">DOWNLOAD</button><button class="cancel-btn">CANCEL</button></td>
+    
+  `;
+  tableBody.appendChild(downloadRow);
+  const cancel_btn = downloadRow.querySelector('.cancel-btn');
+  const download_btn = downloadRow.querySelector('.download-btn');
+
+  const headerMapping = [
+    {old: "Student_ID", new: " STUDENT NUMBER  "},
+    {old: "Student_Name", new: " STUDENT NAME  "},
+    {old: "Student_Section", new: " SECTION "},
+    {old: "Student_Course", new: " COURSE CODE  "},
+    {old: "Com_Unit_Num", new: " PC NUMBER "},
+    {old: "Teacher_Name", new: " INSTRUCTOR "},
+    {old: "Date_Scan", new: " TIME/DATE SCANNED "},
+    {old: "SchoolOnTime", new: " LATE "}
+];
+
+cancel_btn.addEventListener('click', ()=>{
+  document.getElementById('table-sub-container').style.display="none";
+})
+
+download_btn.addEventListener('click', () => {
+
+    tableBody.removeChild(downloadRow);
+
+    let wb = XLSX.utils.table_to_book(document.getElementById('student-container'), {sheet:"Attendance"});
+
+    // Customize the header
+    const ws = wb.Sheets['Attendance'];
+    for (let i = 0; i < headerMapping.length; i++) {
+        const oldHeader = headerMapping[i].old;
+        const newHeader = headerMapping[i].new;
+        ws[XLSX.utils.encode_cell({r: 0, c: i})] = {v: newHeader, t: 's'}; // 's' indicates string type
+    }
+
+    // Calculate max length of data in each column
+    let maxLengths = [];
+    for (let R = 0; R != ws["!ref"].split(':')[1].charCodeAt(0) - 'A'.charCodeAt(0) + 1; ++R) {
+        let maxLength = 0;
+        for (let C = 0; C != ws["!ref"].split(':')[1].slice(1); ++C) {
+            let cell = ws[String.fromCharCode('A'.charCodeAt(0) + R) + (C + 1)];
+            if (cell !== undefined && cell.v.length > maxLength) maxLength = cell.v.length;
+        }
+        maxLengths.push(maxLength);
+    }
+
+    // Set column widths
+    ws["!cols"] = maxLengths.map(w => ({wch: w}));
+
+    let wbout = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
+    saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), 'ComLab-Attendance.xlsx');
+
+    tableBody.appendChild(downloadRow);
+
+    deletData();
+    document.getElementById('pop-up-top').style="display:none";
+    document.getElementById('pop-up-message').innerHTML="Download Complete! it will reset all, thank you for using ACQLA your simple yet useful Online Attendance";
+    document.getElementById('pop-up-message').style.textAlign = "center";
+    myPopup.classList.add("show");
+    setInterval(function() {
+      location.reload();
+    }, 3000);
+
+});
+
+function s2ab(s) {
+    var buf = new ArrayBuffer(s.length);
+    var view = new Uint8Array(buf);
+    for (var i=0; i<s.length; i++) view[i] = s.charCodeAt(i) & 0xFF;
+    return buf;
+}
+
+}
+donwload_btn.addEventListener('click', function(){
+  if (deskStat == ""){
+    document.getElementById('pop-up-top').style="display:none";
+    document.getElementById('pop-up-message').innerHTML="No data to download";
+    document.getElementById('pop-up-message').style.textAlign = "center";
+    myPopup.classList.add("show");
+  }else{
+    document.getElementById('table-sub-container').style.display="flex";
+  }  
+})
+
+closePopup.addEventListener("click", function () {
+  myPopup.classList.remove("show");
+});
+window.addEventListener("click", function (event) {
+if (event.target == myPopup) {
+  myPopup.classList.remove("show");
+}
+});
+  
+  setInterval(function() {
+    if(document.getElementById('teacher-form-container').style.display==="flex" || 
+      document.getElementById('table-sub-container').style.display==="flex" ||
+      myPopup.classList.contains("show") ||
+      infodetails.style.opacity!=="0"){
+    }else{
+      if (count < 3) {
+        count++;
+      } else {
+        location.reload();
+        count="";
+      }
+    }
+    
+  }, 10000);
