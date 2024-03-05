@@ -9,8 +9,9 @@ body,html {
     overflow-x: hidden;
 }
 body {
-    background-color: #ebebeb;
+    background-color: #ebebeb;  
 }
+
 .teacher-frontTable{
     color: blanchedalmond;
     background-color: lightsalmon;
@@ -408,7 +409,7 @@ span.desk {
         transform: translateX(-50%); 
         background-color: darkgrey;
         width: auto;
-        max-height: 80vh; 
+        max-height: 70vh; 
         border-radius: 10px;
         padding: 10px;
         display: none;
@@ -520,7 +521,7 @@ body{
     justify-content: space-evenly;
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 700;
     font-style: normal;
     font-variation-settings: "wdth" 100;
 }
@@ -564,7 +565,7 @@ body{
         margin-bottom: 20px;
     }
     td{
-        padding: 40px;
+        padding: 30px;
     }
 }
 @media (min-width:1024px) and (max-width:1500px) {
